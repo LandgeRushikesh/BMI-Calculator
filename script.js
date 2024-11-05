@@ -9,6 +9,10 @@ let calculate = (weight,height) =>{
         result.innerText = "Weight and height must be positive numbers!";
         return
     }
+    else if(height == "" || weight == "" || isNaN(height) || isNaN(weight)){
+        result.innerText = "Weight and height must be numbers!";
+        return
+    }
     return weight/(height/100)**2
 }
 
